@@ -51,7 +51,11 @@ h3 {
     margin: 10px 0;
 }
 
+.addCurso{
+    display: none;
+}
 table img {
     width: 220px;
     border: 1px solid #ccc;
 }
+
