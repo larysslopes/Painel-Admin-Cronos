@@ -8,8 +8,19 @@ function Servicos() {
             <div class="col">
     
     
-              <h3>Serviços</h3>
-              <button class="btn btn-primary">Adicionar novo</button>
+            <section class="addCurso"/>
+            <br/>
+            <h6> Adicionar novo curso </h6>
+            <ul class="cadastroCurso">
+              <li><label> Nome do curso: </label> <input type="text"/></li>
+              <li><label> Imagem: </label> <input type="file"/></li>
+              <li> <label> Descrição: </label> <textarea name="descricao" style="margin: 5px 0px; width: 400px; height: 89px;"></textarea></li>
+            </ul>
+            
+           <br/>
+            <button class="btnEnviar"> Adicionar </button>
+        <section/>
+
               <FormularioCursos />
               <table class="table my-5">
                 <thead>
@@ -58,4 +69,6 @@ function Servicos() {
   }
   
   export default Servicos;
+  
+
   
