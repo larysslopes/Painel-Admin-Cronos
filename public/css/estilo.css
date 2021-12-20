@@ -58,6 +58,10 @@ h3 {
 
 }
 
+.addCurso{
+    display: none;
+}
+
 label {
     width: 120px;
 }
