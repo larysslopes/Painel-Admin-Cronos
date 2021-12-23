@@ -6,10 +6,8 @@ function Servicos() {
         <div class="container">
           <div class="row">
             <div class="col">
-    
-    
-              <h3>Serviços</h3>
-              <button class="btn btn-primary">Adicionar novo</button>
+            <h3>Serviços</h3>
+            <button class="btn-primary"> Adicionar novo </button>
               <FormularioCursos />
               <table class="table my-5">
                 <thead>
@@ -58,4 +56,6 @@ function Servicos() {
   }
   
   export default Servicos;
+  
+
   

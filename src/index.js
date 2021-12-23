@@ -21,6 +21,7 @@ ReactDOM.render(
 reportWebVitals();
 
 
+
 // Botão adicionar novo - aparecimento do formulario
 let btnAddNovo = document.querySelector(".btn-primary")
 
@@ -35,3 +36,42 @@ function() {
     }
 
 })
+
+
+// let dadosCurso = [{
+//   nomeCurso: "novoCusoNome",
+//   imagem: "novoCursoImagem",
+//   descricao: "novoCursoDescricao"
+// }]
+
+// function carregarDadosCurso(){
+//   let dadosCadastro = document.querySelector(".addCurso");
+//   dadosCadastro.innerHTML = "";
+//   dadosCurso.forEach((el) => {
+//     let nomeCurso = el.nomeCurso;
+//     let imagem = el.imagem;
+//     let descricao = el.descricao;
+
+//     let addCurso = `<section class="addCurso">
+//     <br>
+//     <h6> Adicionar novo curso </h6>
+//     <ul class="cadastroCurso">
+//       <li><label> Nome do curso: </label> <input type="text" value="${nomeCurso}"></li>
+//       <li><label> Imagem: </label> <input type="file"value="${imagem}></li>
+//       <li> <label> Descrição: </label> <textarea name="descricao" style="margin: 5px 0px; width: 400px; height: 89px;" value="${descricao}></textarea></li>
+//     </ul>
+    
+//    <br>
+//     <button class="btnEnviar"> Adicionar </button>
+//     <button class="btnCancelar"> Cancelar </button>
+// </section>`;
+
+// dadosCadastro.innerHTML += addCurso;
+
+//   })
+
+//   function adicionarNovoCurso() {
+//     dadosCurso.push({ identificador: "", nome: "", idade: "" });
+//     adicionarNovoCurso();
+//   }
+// }
