@@ -44,13 +44,21 @@ h3 {
     margin: 30px 0;
 }
 
-.btn.btn-primary {
+.btn-primary,
+.btnEnviar {
     background-color: #0097A7;
     border-color: #0097A7;
     text-transform: uppercase;
     margin: 10px 0;
 }
 
+.btnCancelar {
+    background-color: #e90606;
+    border-color: #a70000;
+    text-transform: uppercase;
+    margin: 0px 10px;
+
+}
 .cadastroCurso {
     display: flex;
     flex-direction: column;

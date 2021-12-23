@@ -12,6 +12,7 @@ function FormularioCursos() {
       
       <br/>
       <button class="btnEnviar"> Adicionar </button>
+      <button class="btnCancelar"> Cancelar </button>
       </section>
     );
   }
