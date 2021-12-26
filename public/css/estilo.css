@@ -45,6 +45,7 @@ h3 {
 }
 
 .btn-primary,
+.btnEditar,
 .btnEnviar {
     background-color: #0097A7;
     border-color: #0097A7;
@@ -52,9 +53,10 @@ h3 {
     margin: 10px 0;
 }
 
-.btnCancelar {
+.btnCancelar,
+.btnExcluir {
     background-color: #e90606;
-    border-color: #a70000;
+    border-color: #ca0101;
     text-transform: uppercase;
     margin: 0px 10px;
 

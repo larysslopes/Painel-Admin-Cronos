@@ -25,23 +25,29 @@
     <div class="container">
       <div class="row">
         <div class="col">
+
           <h3>Serviços</h3>
           <button class="btn-primary">Adicionar novo</button>
-          <section class="addCurso">
-            <br>
-            <h6> Adicionar novo curso </h6>
-            <ul class="cadastroCurso">
-              <li><label> Nome do curso: </label> <input type="text"></li>
-              <li><label> Imagem: </label> <input type="file"></li>
-              <li> <label> Descrição: </label> <textarea name="descricao" style="margin: 5px 0px; width: 400px; height: 89px;"></textarea></li>
-            </ul>
-            
-           <br>
-            <button class="btnEnviar"> Adicionar </button>
-            <button class="btnCancelar"> Cancelar </button>
-        </section>
-          <table class="table my-5">
-            <thead>
+
+            <section class="addCurso">
+
+              <br>
+              <h6> Adicionar novo curso </h6>
+              <ul class="cadastroCurso">
+                <li><label> Nome do curso: </label> <input type="text" id="novo-Titulo" ></li>
+                <li><label> Novo ID: </label><input type="number" id="novoID"></li>
+                <li><label> Imagem: </label> <input type="file" id="nova-Img"></li>
+                <li> <label> Descrição: </label> <textarea name="descricao" id="novo-Descricao" style="margin: 5px 0px; width: 400px; height: 89px;"></textarea></li>
+              </ul>
+              
+              <br>
+              <button class="btnEnviar"> Adicionar </button>
+              <button class="btnCancelar"> Cancelar </button>
+
+            </section>
+        
+          <table class="tabela">
+            <thead class="tab">
               <tr>
                 <td>Nome</td>
                 <td>Imagem</td>
@@ -55,8 +61,8 @@
                 <td><img src="imagens/ilustra-web.png" class="img-fluid" /></td>
                 <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
                 <td>
-                  <button class="btn btn-secondary m-1">editar</button>
-                  <button class="btn btn-danger m-1">excluir</button>
+                  <button class="btnEditar">editar</button>
+                  <button class="btnExcluir">excluir</button>
                 </td>
               </tr>
               <tr>
@@ -64,8 +70,8 @@
                 <td><img src="imagens/ilustra-marketing.png" class="img-fluid" /></td>
                 <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
                 <td>
-                  <button class="btn btn-secondary m-1">editar</button>
-                  <button class="btn btn-danger m-1">excluir</button>
+                  <button class="btnEditar">editar</button>
+                  <button class="btnExcluir">excluir</button>                  <button class="btn btn-danger m-1">excluir</button>
                 </td>
               </tr>
               <tr>
@@ -73,8 +79,8 @@
                 <td><img src="imagens/ilustra-ux.png" class="img-fluid" /></td>
                 <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
                 <td>
-                  <button class="btn btn-secondary m-1">editar</button>
-                  <button class="btn btn-danger m-1">excluir</button>
+                  <button class="btnEditar">editar</button>
+                  <button class="btnExcluir">excluir</button>>
                 </td>
               </tr>
             </tbody>

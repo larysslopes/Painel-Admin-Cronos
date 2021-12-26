@@ -6,11 +6,13 @@ import Header from './Header';
 import Footer from './Footer';
 import Servicos from './Servicos';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Servicos />
     <Footer />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -20,11 +22,16 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+const cursos = require('./cursos.json'); //importando arquivo json
+  
 
+let btnEnviar = document.querySelector(".btnEnviar")
+// let btnCancelar = document.querySelector("btnCancelar")
+// let btnEditar = document.querySelector("btnEditar")
+// let btnExcluir = document.querySelector("btnExcluir")
 
-// Botão adicionar novo - aparecimento do formulario
+// Cadastrar Curso
 let btnAddNovo = document.querySelector(".btn-primary")
-
 btnAddNovo.addEventListener("click" , 
 function() {
     let addCurso = document.querySelector(".addCurso");
@@ -37,41 +44,40 @@ function() {
 
 })
 
+//Criar Curso
+const criarCurso = () => {
 
-// let dadosCurso = [{
-//   nomeCurso: "novoCusoNome",
-//   imagem: "novoCursoImagem",
-//   descricao: "novoCursoDescricao"
-// }]
+  // input
+  let novoTitulo = document.querySelector("#novo-Titulo").value;
+  let novoID = document.querySelector("#novoID").value;
+  let novaImagem = document.querySelector("#nova-Img").value;
+  let novoDescricao = document.querySelector("#novo-Descricao").value;
 
-// function carregarDadosCurso(){
-//   let dadosCadastro = document.querySelector(".addCurso");
-//   dadosCadastro.innerHTML = "";
-//   dadosCurso.forEach((el) => {
-//     let nomeCurso = el.nomeCurso;
-//     let imagem = el.imagem;
-//     let descricao = el.descricao;
+  // json
+  cursos.push({
+    'nome': novoTitulo,
+    'imagem': novaImagem,
+    'descricao': novoDescricao,
+    'id': novoID
+  
+  });
 
-//     let addCurso = `<section class="addCurso">
-//     <br>
-//     <h6> Adicionar novo curso </h6>
-//     <ul class="cadastroCurso">
-//       <li><label> Nome do curso: </label> <input type="text" value="${nomeCurso}"></li>
-//       <li><label> Imagem: </label> <input type="file"value="${imagem}></li>
-//       <li> <label> Descrição: </label> <textarea name="descricao" style="margin: 5px 0px; width: 400px; height: 89px;" value="${descricao}></textarea></li>
-//     </ul>
-    
-//    <br>
-//     <button class="btnEnviar"> Adicionar </button>
-//     <button class="btnCancelar"> Cancelar </button>
-// </section>`;
+  const novoCurso = document.createElement("tr")
+  novoCurso.innerHTML = `
+  <td>"${novoTitulo}" </td>
+  <td><img src=${novaImagem}"" class="img" /></td>
+  <td>${novoDescricao} </td>
+  <td>
+  <button class="btnEditar" onclick="editarCurso(${novoID})">Editar</button>
+  <button class="btnExcluir" onclick="deletarCurso(${novoID})">Excluir</button>
+  </td>  `;
 
-// dadosCadastro.innerHTML += addCurso;
+  novoCurso.setAttribute("id", `${novoID}`);
+  document.querySelector(".tabela").appendChild(novoCurso);
+  document.querySelector(".tab").reset();
+  
+}
 
-//   })
 
-//   function adicionarNovoCurso() {
-//     dadosCurso.push({ identificador: "", nome: "", idade: "" });
-//     adicionarNovoCurso();
-//   }
-// }
+
+btnEnviar.addEventListener("click", criarCurso)
