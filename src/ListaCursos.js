@@ -1,8 +1,7 @@
 import Curso from './Curso'
 
 function ListaCursos(){
-    var cursos = require('./cursos.json');
-    console.log(cursos);
+    var cursos = JSON.parse(localStorage.getItem('cursos'));
     return(
         <table className="table my-5">
             <thead>

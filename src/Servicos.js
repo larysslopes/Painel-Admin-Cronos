@@ -1,24 +1,40 @@
 import FormularioCursos from './FormularioCursos';
 import ListaCursos from './ListaCursos';
+import React from 'react';
 
-function Servicos() {
-    return (
-        <section id="servicos" class="py-5 mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col">
+export default class Servicos extends React.Component {
+    state = {
+      mssg: ""
+    };
+
+    redraw = () => {
+      this.setState(this.state);
+    };
+
+    exibirFormulario = () => {
+      let addCurso = document.querySelector(".addCurso");
+
+      if(addCurso.style.display === "block") {
+          addCurso.style.display = "none";
+      } else {
+          addCurso.style.display = "block";
+      }
+    }
+
+    render() {
+      return (
+        <section id="servicos" className="py-5 mb-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
             <h3>Serviços</h3>
-            <button class="btn-primary"> Adicionar novo </button>
-              <FormularioCursos />
-              <ListaCursos/>
+            <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
+              <FormularioCursos eventoRedraw={this.redraw}/>
+              <ListaCursos />
             </div>
           </div>
         </div>
       </section>
-    );
+    )
   }
-  
-  export default Servicos;
-  
-
-  
+} 
