@@ -14,7 +14,7 @@ function ListaCursos(){
             </thead>
             <tbody>
             {cursos.map((curso, i) => {
-                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={i}/>)
+                return (<Curso key={i} nome={curso.nome} imagem={curso.imagem} descricao={curso.descricao} id={curso.id}/>)
             })}
             </tbody>
         </table>
