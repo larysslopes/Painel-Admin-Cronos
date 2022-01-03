@@ -1,4 +1,5 @@
 import FormularioCursos from './FormularioCursos';
+import FormularioEditar from './FormularioEditar';
 import ListaCursos from './ListaCursos';
 import React from 'react';
 
@@ -30,6 +31,7 @@ export default class Servicos extends React.Component {
             <h3>Serviços</h3>
             <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
               <FormularioCursos eventoRedraw={this.redraw}/>
+              <FormularioEditar eventoRedraw={this.redraw}/>
               <ListaCursos />
             </div>
           </div>

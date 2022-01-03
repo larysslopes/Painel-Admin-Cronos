@@ -1,12 +1,10 @@
 function Curso({nome,imagem,descricao,id}){
-    const exibirFormulario = () => {
-        let addCurso = document.querySelector(".addCurso");
-        addCurso.style.display = "block";  
-        document.querySelector("#novo-Titulo").value = nome;
-        document.querySelector("#novoID").value = id;
-        document.querySelector("#novo-Descricao").value = descricao;
-        console.log(descricao);
-        console.log(document.querySelector("#novo-Descricao").value);
+    const exibirFormularioEdicao = () => {
+        let editarCurso = document.querySelector(".editarCurso");
+        editarCurso.style.display = "block";  
+        document.querySelector("#editar-titulo").value = nome;
+        document.querySelector("#editar-id").value = id;
+        document.querySelector("#editar-descricao").value = descricao;
     }
 
     return(
@@ -15,7 +13,7 @@ function Curso({nome,imagem,descricao,id}){
             <td><img src={imagem} className="img-fluid" /></td>
             <td>{descricao}</td>
             <td>
-                <button className="btnEditar" onClick={exibirFormulario}>editar</button>
+                <button className="btnEditar" onClick={exibirFormularioEdicao}>editar</button>
                 <button className="btnExcluir" >excluir</button>
             </td>
         </tr>
