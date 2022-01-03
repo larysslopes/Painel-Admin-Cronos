@@ -1,61 +1,46 @@
 import FormularioCursos from './FormularioCursos';
+import FormularioEditar from './FormularioEditar';
+import ListaCursos from './ListaCursos';
+import React from 'react';
 
-function Servicos() {
-    return (
-        <section id="servicos" class="py-5 mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col">
+
+export default class Servicos extends React.Component {
+    state = {
+      mssg: ""
+    };
+
+    redraw = () => {
+      this.setState(this.state);
+    };
+
+    exibirFormulario = () => {
+      let addCurso = document.querySelector(".addCurso");
+
+      if(addCurso.style.display === "block") {
+          addCurso.style.display = "none";
+      } else {
+          addCurso.style.display = "block";
+      }
+    }
+
+    render() {
+      return (
+        <section id="servicos" className="py-5 mb-5">
+        <div className="container">
+          <div className="row">
+            <div className="col">
             <h3>Serviços</h3>
-            <button class="btn-primary"> Adicionar novo </button>
-              <FormularioCursos />
-              <table class="table my-5">
-                <thead>
-                  <tr>
-                    <td>Nome</td>
-                    <td>Imagem</td>
-                    <td>Descrição</td>
-                    <td>Ações</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Desenvolvimento Web</td>
-                    <td><img src="imagens/ilustra-web.png" class="img-fluid" /></td>
-                    <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
-                    <td>
-                      <button class="btn btn-secondary m-1">editar</button>
-                      <button class="btn btn-danger m-1">excluir</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Marketing Digital</td>
-                    <td><img src="imagens/ilustra-marketing.png" class="img-fluid" /></td>
-                    <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
-                    <td>
-                      <button class="btn btn-secondary m-1">editar</button>
-                      <button class="btn btn-danger m-1">excluir</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Consultoria UX</td>
-                    <td><img src="imagens/ilustra-ux.png" class="img-fluid" /></td>
-                    <td>Consequatur debitis ipsa numquam illum placeat quod deleniti.</td>
-                    <td>
-                      <button class="btn btn-secondary m-1">editar</button>
-                      <button class="btn btn-danger m-1">excluir</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <button className="btn-primary" onClick={this.exibirFormulario}> Adicionar novo </button>
+              <FormularioCursos eventoRedraw={this.redraw}/>
+              <FormularioEditar eventoRedraw={this.redraw}/>
+              <ListaCursos />
+
             </div>
           </div>
         </div>
       </section>
-    );
+    )
   }
-  
-  export default Servicos;
-  
 
+  export default Servicos;
   

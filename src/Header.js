@@ -2,7 +2,7 @@
 function Header() {
     return (
         <header>
-        <div class="container">
+        <div className="container">
           <a href="#">
             <img src="./imagens/CRONOS-logo-white.png" alt="Agência CRONOS" />
           </a>

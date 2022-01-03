@@ -45,6 +45,7 @@ h3 {
 }
 
 .btn-primary,
+.btnEditar,
 .btnEnviar {
     background-color: #0097A7;
     border-color: #0097A7;
@@ -52,7 +53,8 @@ h3 {
     margin: 10px 0;
 }
 
-.btnCancelar {
+.btnCancelar,
+.btnExcluir {
     background-color: #e90606;
     border-color: #a70000;
     text-transform: uppercase;
@@ -66,12 +68,14 @@ h3 {
 
 }
 
-.addCurso{
+.addCurso, .editarCurso{
     display: none;
 }
 
 label {
     width: 120px;
+    margin-top: 10px;
+
 }
 
 input {
